@@ -1,4 +1,4 @@
-# Terraform porject: A Centos7 with docker on EC2 AWS 
+# Terraform project: A Centos7 with docker on EC2 AWS 
 
 **Description:** Terraform project to a Centos7 instance with Docker CE and docker-compose in an Amazon VPC subnet with an AWS secrutity group allowing only our current public IP to access SSH(22) and HTTPS(443.
 In addition, a public DNS record is created in a given domain zone.
@@ -51,9 +51,11 @@ module "aws_ec2_docker" {
 - A domain in AWS Route53: ``` ${var.r53_zoneid_public} ```
 
 
-# Terraform Usage 
+# Usage 
 
-## Requirements 
+## Terraform 
+
+### Requirements 
 - Install Terraform
 - Install AWS CLI
 - Getting **AWS_API_KEY** and **AWS_API_SECRET** and put it in ``` example.tfvars ```
@@ -71,9 +73,9 @@ module "aws_ec2_docker" {
 > ./tf.sh destroy -auto-approve -var-file="example.tfvars"
 ```
 
-# Summon Usage - Keyring
+## Summon Usage - Keyring
 
-## Requirements 
+### Requirements 
 - Install Terraform
 - Install AWS CLI
 - [Install Summon](https://github.com/cyberark/summon#install)
@@ -97,9 +99,9 @@ module "aws_ec2_docker" {
 > summon -p ring.py ./tf.sh destroy -auto-approve 
 ```
 
-# Summon Usage - Conjur/DAP 
+## Summon Usage - Conjur/DAP 
 
-## Requirements 
+### Requirements 
 - Install Terraform
 - Install AWS CLI
 - [Install Summon](https://github.com/cyberark/summon#install)
