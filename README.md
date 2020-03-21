@@ -73,7 +73,7 @@ module "aws_ec2_docker" {
 > ./tf.sh destroy -auto-approve -var-file="example.tfvars"
 ```
 
-## Summon Usage - Keyring
+## Summon - Keyring
 
 ### Requirements 
 - Install Terraform
@@ -99,7 +99,7 @@ module "aws_ec2_docker" {
 > summon -p ring.py ./tf.sh destroy -auto-approve 
 ```
 
-## Summon Usage - Conjur/DAP 
+## Summon - Conjur/DAP 
 
 ### Requirements 
 - Install Terraform
