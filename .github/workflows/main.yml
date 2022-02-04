@@ -11,8 +11,6 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-      - name: Terraform Init
-        uses: hashicorp/terraform-github-actions/init@v0.4.0
       - name: Run Trivy vulnerability scanner in IaC mode
         uses: aquasecurity/trivy-action@master
         with:
@@ -24,5 +22,4 @@ jobs:
           AQUA_KEY: ${{ secrets.AQUA_KEY }}
           AQUA_SECRET: ${{ secrets.AQUA_SECRET }}
           TRIVY_RUN_AS_PLUGIN: 'aqua'
-      - name: Terraform Validate
-        uses: hashicorp/terraform-github-actions/validate@v0.3.7
+
