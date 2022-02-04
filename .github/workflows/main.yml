@@ -13,8 +13,6 @@ jobs:
         uses: actions/checkout@v2
       - name: Terraform Init
         uses: hashicorp/terraform-github-actions/init@v0.4.0
-        env:
-          TF_ACTION_WORKING_DIR: 'terraform'
       - name: Run Trivy vulnerability scanner in IaC mode
         uses: aquasecurity/trivy-action@master
         with:
@@ -28,5 +26,3 @@ jobs:
           TRIVY_RUN_AS_PLUGIN: 'aqua'
       - name: Terraform Validate
         uses: hashicorp/terraform-github-actions/validate@v0.3.7
-        env:
-          TF_ACTION_WORKING_DIR: 'terraform'
